@@ -65,10 +65,17 @@
                 </xsd:documentation>
               </xsd:annotation>
             </xsd:enumeration>
+            <xsd:enumeration value="2.1.0">
+              <xsd:annotation>
+                <xsd:documentation>
+                  Introduction of ADP and Theme.
+                </xsd:documentation>
+              </xsd:annotation>
+            </xsd:enumeration>
           </xsd:restriction>
         </xsd:simpleType>
       </xsd:attribute>
-      <xsd:attribute name="askiaCompat" type="adc:versionNumber" default="5.3.3">
+      <xsd:attribute name="askiaCompat" type="adc:versionNumber" default="5.4.2">
         <xsd:annotation>
           <xsd:documentation>
             Compatibility version with Askia product.
@@ -122,6 +129,8 @@
         <xsd:element name="categories">
           <xsd:annotation>
             <xsd:documentation>
+              [DEPRECATED]
+              Please avoid the usage of this element it will be remove in the next ADC version.
               List the categories of the ADC.
             </xsd:documentation>
           </xsd:annotation>
@@ -130,6 +139,8 @@
               <xsd:element name="category" minOccurs="1" maxOccurs="unbounded" type="xsd:token">
                 <xsd:annotation>
                   <xsd:documentation>
+                    [DEPRECATED]
+                    Please avoid the usage of this element it will be remove in the next ADC version.
                     Freeform text which indicates the category of the ADC (ex: Sliders, Flash ...).
                   </xsd:documentation>
                 </xsd:annotation>
@@ -175,6 +186,8 @@
         <xsd:element name="style" minOccurs="0">
           <xsd:annotation>
             <xsd:documentation>
+              [DEPRECATED]
+              Please avoid the usage of this element it will be remove in the next ADC version.
               Default size of the ADC, mostly use for the ADC-Flash.
             </xsd:documentation>
           </xsd:annotation>
@@ -182,6 +195,8 @@
             <xsd:attribute name="width" type="xsd:double">
               <xsd:annotation>
                 <xsd:documentation>
+                  [DEPRECATED]
+                  Please avoid the usage of this element it will be remove in the next ADC version.
                   Width of control in pixel.
                 </xsd:documentation>
               </xsd:annotation>
@@ -189,6 +204,8 @@
             <xsd:attribute name="height" type="xsd:double">
               <xsd:annotation>
                 <xsd:documentation>
+                  [DEPRECATED]
+                  Please avoid the usage of this element it will be remove in the next ADC version.
                   Height of control in pixel.
                 </xsd:documentation>
               </xsd:annotation>
@@ -263,49 +280,49 @@
       <xsd:attribute name="chapter" type="xsd:boolean" default="false">
         <xsd:annotation>
           <xsd:documentation>
-            Use for the constraint on questions, indicates the if the ADC is allowed on chapter.
+            Use for the constraint on questions, indicates if the ADC is allowed on chapter.
           </xsd:documentation>
         </xsd:annotation>
       </xsd:attribute>
       <xsd:attribute name="single" type="xsd:boolean" default="false">
         <xsd:annotation>
           <xsd:documentation>
-            Use for the constraint on questions, indicates the if the ADC is allowed on single closed questions.
+            Use for the constraint on questions, indicates if the ADC is allowed on single closed questions.
           </xsd:documentation>
         </xsd:annotation>
       </xsd:attribute>
       <xsd:attribute name="multiple" type="xsd:boolean" default="false" >
         <xsd:annotation>
           <xsd:documentation>
-            Use for the constraint on questions, indicates the if the ADC is allowed on multi-coded question.
+            Use for the constraint on questions, indicates if the ADC is allowed on multi-coded question.
           </xsd:documentation>
         </xsd:annotation>
       </xsd:attribute>
       <xsd:attribute name="numeric" type="xsd:boolean" default="false">
         <xsd:annotation>
           <xsd:documentation>
-            Use for the constraint on questions, indicates the if the ADC is allowed on numeric questions.
+            Use for the constraint on questions, indicates if the ADC is allowed on numeric questions.
           </xsd:documentation>
         </xsd:annotation>
       </xsd:attribute>
       <xsd:attribute name="open" type="xsd:boolean" default="false" >
         <xsd:annotation>
           <xsd:documentation>
-            Use for the constraint on questions, indicates the if the ADC is allowed on open-ended questions.
+            Use for the constraint on questions, indicates if the ADC is allowed on open-ended questions.
           </xsd:documentation>
         </xsd:annotation>
       </xsd:attribute>
       <xsd:attribute name="date" type="xsd:boolean" default="false">
         <xsd:annotation>
           <xsd:documentation>
-            Use for the constraint on questions, indicates the if the ADC is allowed on date questions.
+            Use for the constraint on questions, indicates if the ADC is allowed on date questions.
           </xsd:documentation>
         </xsd:annotation>
       </xsd:attribute>
       <xsd:attribute name="requireParentLoop" type="xsd:boolean" default="false">
         <xsd:annotation>
           <xsd:documentation>
-            Use for the constraint on questions, indicates the question require a parent loop.
+            Use for the constraint on questions, indicates question require a parent loop.
           </xsd:documentation>
         </xsd:annotation>
       </xsd:attribute>
@@ -806,26 +823,12 @@
               </xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:element name="value" minOccurs="1" maxOccurs="unbounded">
+          <xsd:element name="value" type="xsd:string"  minOccurs="1" maxOccurs="1">
             <xsd:annotation>
               <xsd:documentation>
                 Default value of the property.
               </xsd:documentation>
             </xsd:annotation>
-            <xsd:complexType>
-              <xsd:simpleContent>
-                <xsd:extension base="xsd:string">
-                  <xsd:attribute name="theme" type="xsd:normalizedString" default="default" use="optional">
-                    <xsd:annotation>
-                      <xsd:documentation>
-                        Indicates the default value for the specified 'theme'.
-                        Also see the &lt;globalproperty id="askia-theme" /&gt;
-                      </xsd:documentation>
-                    </xsd:annotation>
-                  </xsd:attribute>
-                </xsd:extension>
-              </xsd:simpleContent>
-            </xsd:complexType>
           </xsd:element>
           <xsd:element ref="adc:options"  minOccurs="0" maxOccurs="1" />
         </xsd:sequence>
@@ -906,7 +909,7 @@
             </xsd:restriction>
           </xsd:simpleType>
         </xsd:attribute>
-        <xsd:attribute name="mode" default="static">
+        <xsd:attribute name="mode" default="dynamic">
           <xsd:annotation>
             <xsd:documentation>
               Indicate if the value of the property could or not embed AskiaScript code.
@@ -1053,23 +1056,6 @@
           </xsd:annotation>
           <xsd:simpleType>
             <xsd:restriction base="xsd:NCName">
-              <xsd:enumeration value="askia-theme">
-                <xsd:annotation>
-                  <xsd:documentation>
-                    List all possible themes.
-                    Allow properties to multiple default values for each theme.
-                    If a &lt;value /&gt; of a property doesn't specify the theme,
-                    a theme named 'default' will be automatically associated with it.
-
-                    category: 'General'
-                    name: 'Theme'
-                    type: 'strubg'
-                    description: 'Predefined themes'
-                    mode: 'dynamic'
-                    Requires: &lt;options&gt; tag
-                  </xsd:documentation>
-                </xsd:annotation>
-              </xsd:enumeration>
               <xsd:enumeration value="askia-addDK">
                 <xsd:annotation>
                   <xsd:documentation>
