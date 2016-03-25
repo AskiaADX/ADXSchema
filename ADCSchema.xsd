@@ -458,6 +458,8 @@
       <xsd:attribute name="defaultGeneration" type="xsd:boolean" default="false">
         <xsd:annotation>
           <xsd:documentation>
+            [DEPRECATED]
+            Please avoid the usage of this element it will be remove in the next ADC version.
             Indicates if the system must generate or not the default controls.
           </xsd:documentation>
         </xsd:annotation>
