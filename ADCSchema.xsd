@@ -618,7 +618,7 @@
                 <xsd:documentation>
                   The share content is always associated with a file and must be place in the /Resources/Share/ folder of the ADC.
                   The share content will be extract in the resources folder of the survey /Resources/SurveyName/.
-                  This kind of content, could be share accross ADCs and will not be overrides when it already exist in the folder.
+                  This kind of content, could be share accross ADX component and will not be overrides when it already exist in the folder.
                 </xsd:documentation>
               </xsd:annotation>
             </xsd:enumeration>
