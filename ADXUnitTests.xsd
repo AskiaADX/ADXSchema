@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            targetNamespace="http://www.askia.com/2.1.0/ADCUnitTestSchema"
-            xmlns="http://www.askia.com/2.1.0/ADCUnitTestSchema"
+            targetNamespace="http://www.askia.com/2.1.0/ADXUnitTestSchema"
+            xmlns="http://www.askia.com/2.1.0/ADXUnitTestSchema"
             elementFormDefault="qualified">
 
   <!-- DEFINITION -->
@@ -670,6 +670,7 @@
         <xsd:element ref="assert_match" minOccurs="0" maxOccurs="1" />
         <xsd:element ref="assert_not_match" minOccurs="0" maxOccurs="1" />
 
+        <xsd:element ref="page" minOccurs="0" maxOccurs="1"/>
         <xsd:element ref="head" minOccurs="0" maxOccurs="1" />
         <xsd:element ref="placeholder" minOccurs="0" maxOccurs="1" />
         <xsd:element ref="foot" minOccurs="0" maxOccurs="1" />
@@ -736,7 +737,10 @@
     </xsd:annotation>
   </xsd:element>
 
-  <!-- Assert by section (head, placeholder, foot) -->
+  <!-- Assert by section
+    For ADC: head, placeholder, foot
+    For ADP: page
+  -->
   <xsd:complexType name="assertsBySection">
     <xsd:annotation>
       <xsd:documentation>
@@ -763,6 +767,7 @@
   </xsd:complexType>
 
   <!-- Section -->
+  <xsd:element name="page" type="assertsBySection" />
   <xsd:element name="head" type="assertsBySection" />
   <xsd:element name="placeholder" type="assertsBySection" />
   <xsd:element name="foot" type="assertsBySection" />
