@@ -608,24 +608,31 @@
     <xsd:complexType>
       <xsd:sequence minOccurs="0" maxOccurs="unbounded">
         <xsd:choice>
+          <xsd:element name="page" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>
+                Fake the output of the page (mostly used for ADP)
+              </xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
           <xsd:element name="head" type="xsd:string">
             <xsd:annotation>
               <xsd:documentation>
-                Fake the output of the head section
+                Fake the output of the head section (ADC only)
               </xsd:documentation>
             </xsd:annotation>  
           </xsd:element>
           <xsd:element name="placeholder" type="xsd:string">
             <xsd:annotation>
               <xsd:documentation>
-                Fake the output of the placeholder section
+                Fake the output of the placeholder section (ADC only)
               </xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="foot" type="xsd:string">
             <xsd:annotation>
               <xsd:documentation>
-                Fake the output of the foot section
+                Fake the output of the foot section (ADC only)
               </xsd:documentation>
             </xsd:annotation>
           </xsd:element>
