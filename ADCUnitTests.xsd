@@ -270,8 +270,8 @@
     </xsd:annotation>
     <xsd:complexType>
       <xsd:all>
-        <xsd:element ref="arrange" />
-        <xsd:element ref="asserts" />
+        <xsd:element ref="arrange" minOccurs="0" maxOccurs="1" />
+        <xsd:element ref="asserts" minOccurs="0" maxOccurs="1" />
       </xsd:all>
 
       <xsd:attribute name="description" type="xsd:normalizedString" use="required">
@@ -558,9 +558,9 @@
     </xsd:annotation>
     <xsd:complexType>
       <xsd:all>
-        <xsd:element ref="arrange" />
+        <xsd:element ref="arrange" minOccurs="0" maxOccurs="1" />
         <xsd:element ref="fake_output" minOccurs="0" maxOccurs="1" />
-        <xsd:element ref="asserts" />
+        <xsd:element ref="asserts" minOccurs="0" maxOccurs="1" />
       </xsd:all>
 
       <xsd:attribute name="id" type="xsd:normalizedString" use="required">
@@ -581,6 +581,14 @@
         <xsd:annotation>
           <xsd:documentation>
             Fixture file to use for the current test
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="cases" type="xsd:normalizedString">
+        <xsd:annotation>
+          <xsd:documentation>
+            Ids of cases (separate with coma delimiter) on which the test should loop through.
+            The test will run for each specified cases.
           </xsd:documentation>
         </xsd:annotation>
       </xsd:attribute>
