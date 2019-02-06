@@ -326,6 +326,13 @@
           </xsd:documentation>
         </xsd:annotation>
       </xsd:attribute>
+      <xsd:attribute name="requireLoopDepth" type="xsd:number" default="0">
+        <xsd:annotation>
+          <xsd:documentation>
+            Attribute of the output
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
 
       <!-- Attribute specific for the responses constraints -->
       <xsd:attribute name="min" type="adc:numberPattern" default="*">
@@ -780,7 +787,7 @@
             </xsd:complexType>
           </xsd:element>
 
-          <xsd:element name="property" type="adc:abstractPropertyBase" /> 
+          <xsd:element name="property" type="adc:abstractPropertyBase" />
         </xsd:choice>
       </xsd:sequence>
     </xsd:complexType>
@@ -794,7 +801,7 @@
       <xsd:selector xpath=".//*" />
       <xsd:field xpath="@id" />
     </xsd:unique>
-    
+
   </xsd:element>
 
   <!-- Abstract property -->
@@ -1078,7 +1085,7 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  
+
   <!-- Askia property -->
   <xsd:complexType name="askiaProperty">
     <xsd:complexContent>
