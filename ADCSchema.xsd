@@ -326,7 +326,7 @@
           </xsd:documentation>
         </xsd:annotation>
       </xsd:attribute>
-      <xsd:attribute name="requireLoopDepth" type="xsd:number" default="0">
+      <xsd:attribute name="requireLoopDepth" type="xsd:integer" default="0">
         <xsd:annotation>
           <xsd:documentation>
             constraint on questions of the info
