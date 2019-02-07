@@ -343,7 +343,7 @@
         </xsd:annotation>
       </xsd:attribute>
       <!-- 5.5.2 -->
-      
+
       <!-- Attribute specific for the responses constraints -->
       <xsd:attribute name="min" type="adc:numberPattern" default="*">
         <xsd:annotation>
@@ -492,6 +492,16 @@
           </xsd:documentation>
         </xsd:annotation>
       </xsd:attribute>
+
+      <!-- Compatible with 5.5.2 -->
+      <xsd:attribute name="manageLoopDepth" type="xsd:int" default="0">
+        <xsd:annotation>
+          <xsd:documentation>
+            Used as a attribute for the output.
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <!--  5.5.2 -->
     </xsd:complexType>
 
   </xsd:element>
