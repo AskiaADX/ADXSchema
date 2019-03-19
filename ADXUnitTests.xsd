@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            targetNamespace="http://www.askia.com/2.1.0/ADXUnitTestSchema"
-            xmlns="http://www.askia.com/2.1.0/ADXUnitTestSchema"
-            xmlns:adx="http://www.askia.com/2.1.0/ADXUnitTestSchema"
+            targetNamespace="http://www.askia.com/2.2.0/ADXUnitTestSchema"
+            xmlns="http://www.askia.com/2.2.0/ADXUnitTestSchema"
+            xmlns:adx="http://www.askia.com/2.2.0/ADXUnitTestSchema"
             elementFormDefault="qualified">
 
   <!-- DEFINITION -->
@@ -208,8 +208,8 @@
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  
-  
+
+
   <!-- Tests cases -->
   <xsd:element name="testCases">
     <xsd:annotation>
@@ -242,7 +242,7 @@
       </xsd:all>
     </xsd:complexType>
   </xsd:element>
-  
+
   <!-- Tests -->
   <xsd:element name="tests">
     <xsd:annotation>
@@ -284,7 +284,7 @@
       </xsd:attribute>
     </xsd:complexType>
   </xsd:element>
-  
+
   <!-- Cases -->
   <xsd:element name="cases">
     <xsd:annotation>
@@ -373,7 +373,7 @@
               <xsd:documentation>
                 Id of the output to use
               </xsd:documentation>
-            </xsd:annotation>  
+            </xsd:annotation>
           </xsd:attribute>
         </xsd:complexType>
       </xsd:element>
@@ -695,7 +695,7 @@
               <xsd:documentation>
                 Fake the output of the head section (ADC only)
               </xsd:documentation>
-            </xsd:annotation>  
+            </xsd:annotation>
           </xsd:element>
           <xsd:element name="placeholder" type="xsd:string">
             <xsd:annotation>
@@ -713,7 +713,7 @@
           </xsd:element>
         </xsd:choice>
       </xsd:sequence>
-      
+
       <xsd:attribute name="id" type="xsd:normalizedString">
         <xsd:annotation>
           <xsd:documentation>
@@ -730,7 +730,7 @@
       </xsd:attribute>
     </xsd:complexType>
   </xsd:element>
-  
+
   <!-- Asserts -->
   <xsd:element name="asserts">
     <xsd:annotation>
@@ -853,7 +853,7 @@
   <xsd:element name="head" type="assertsBySection" />
   <xsd:element name="placeholder" type="assertsBySection" />
   <xsd:element name="foot" type="assertsBySection" />
-  
+
   <!-- Node selection -->
   <xsd:element name="select_nodes">
     <xsd:annotation>
@@ -865,7 +865,7 @@
       <xsd:sequence minOccurs="0" maxOccurs="unbounded" >
         <xsd:choice>
           <xsd:element ref="assert_count" />
-          
+
           <xsd:element ref="assert_exist" />
           <xsd:element ref="assert_not_exist" />
 
@@ -880,22 +880,22 @@
 
           <xsd:element ref="assert_match" />
           <xsd:element ref="assert_not_match" />
-          
+
           <xsd:element ref="assert_has_attr" />
           <xsd:element ref="assert_has_not_attr" />
         </xsd:choice>
       </xsd:sequence>
-      
+
       <xsd:attribute name="xPath" type="xsd:string" use="required">
         <xsd:annotation>
           <xsd:documentation>
-            XPath to query HTML nodes      
+            XPath to query HTML nodes
           </xsd:documentation>
         </xsd:annotation>
       </xsd:attribute>
     </xsd:complexType>
   </xsd:element>
-  
+
   <!-- Assert the existence of the selected nodes -->
   <xsd:element name="assert_exist">
     <xsd:annotation>
@@ -1090,7 +1090,7 @@
       </xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  
+
   <!-- Assert tags exists -->
   <xsd:complexType name="assertTags">
     <xsd:annotation>
