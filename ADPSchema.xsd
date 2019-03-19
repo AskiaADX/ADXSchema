@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            targetNamespace="http://www.askia.com/2.1.0/ADPSchema"
-            xmlns="http://www.askia.com/2.1.0/ADPSchema"
-            xmlns:adp="http://www.askia.com/2.1.0/ADPSchema"
+            targetNamespace="http://www.askia.com/2.2.0/ADPSchema"
+            xmlns="http://www.askia.com/2.2.0/ADPSchema"
+            xmlns:adp="http://www.askia.com/2.2.0/ADPSchema"
             elementFormDefault="qualified">
 
   <!-- SPECIFIC TYPE AND VARIABLES -->
@@ -58,17 +58,17 @@
         </xsd:annotation>
         <xsd:simpleType>
           <xsd:restriction base="adp:versionNumber">
-            <xsd:enumeration value="2.1.0">
+            <xsd:enumeration value="2.2.0">
               <xsd:annotation>
                 <xsd:documentation>
-                  Based version of the ADP.
+                  Compatibility with 5.5.2.
                 </xsd:documentation>
               </xsd:annotation>
             </xsd:enumeration>
           </xsd:restriction>
         </xsd:simpleType>
       </xsd:attribute>
-      <xsd:attribute name="askiaCompat" type="adp:versionNumber" default="5.4.2">
+      <xsd:attribute name="askiaCompat" type="adp:versionNumber" default="5.5.2">
         <xsd:annotation>
           <xsd:documentation>
             Compatibility version with Askia product.
@@ -531,7 +531,7 @@
             </xsd:complexType>
           </xsd:element>
 
-          <xsd:element name="property" type="adp:abstractPropertyBase" /> 
+          <xsd:element name="property" type="adp:abstractPropertyBase" />
         </xsd:choice>
       </xsd:sequence>
     </xsd:complexType>
@@ -545,7 +545,7 @@
       <xsd:selector xpath=".//*" />
       <xsd:field xpath="@id" />
     </xsd:unique>
-    
+
   </xsd:element>
 
   <!-- Abstract property -->
@@ -777,7 +777,7 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  
+
   <!-- Askia property -->
   <xsd:complexType name="askiaProperty">
     <xsd:complexContent>

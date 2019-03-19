@@ -82,7 +82,7 @@
           </xsd:restriction>
         </xsd:simpleType>
       </xsd:attribute>
-      <xsd:attribute name="askiaCompat" type="adc:versionNumber" default="5.4.2">
+      <xsd:attribute name="askiaCompat" type="adc:versionNumber" default="5.5.2">
         <xsd:annotation>
           <xsd:documentation>
             Compatibility version with Askia product.
