@@ -335,7 +335,7 @@
       </xsd:attribute>
 
       <!-- compatible with 5.5.2 -->
-      <xsd:attribute name="requireLoopDepth" type="xsd:boolean" default="0">
+      <xsd:attribute name="requireLoopDepth" type="xsd:numberPattern" default="0">
         <xsd:annotation>
           <xsd:documentation>
             Use for the constraint on questions of the info
@@ -494,13 +494,13 @@
       </xsd:attribute>
 
       <!-- Compatible with 5.5.2 -->
-      <xsd:attribute name="manageLoopDepth" type="xsd:boolean" default="0">
+      <!-- <xsd:attribute name="manageLoopDepth" type="xsd:numberPattern" default="0">
         <xsd:annotation>
           <xsd:documentation>
             Used as a attribute for the output.
           </xsd:documentation>
         </xsd:annotation>
-      </xsd:attribute>
+      </xsd:attribute> -->
       <!--  5.5.2 -->
     </xsd:complexType>
 
@@ -520,6 +520,15 @@
     <xsd:annotation>
       <xsd:documentation>
         AskiaScript condition to use the current element.
+      </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+
+  <!-- Manage Loop Depth 5.5.2 -->
+  <xsd:element name="manageLoopDepth" type="xsd:numberPattern">
+    <xsd:annotation>
+      <xsd:documentation>
+        Used as a attribute for the output.
       </xsd:documentation>
     </xsd:annotation>
   </xsd:element>
