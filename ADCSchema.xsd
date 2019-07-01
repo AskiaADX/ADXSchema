@@ -344,6 +344,24 @@
       </xsd:attribute>
       <!-- 5.5.2 -->
 
+      <!-- compatible with 5.5.3 -->
+      <xsd:attribute name="manageSemiOpen" type="xsd:boolean" default="false">
+        <xsd:annotation>
+          <xsd:documentation>
+            Use for the constraint on questions, indicates that the ADC can deal with question with semi-open responses
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+
+      <xsd:attribute name="manageHeader" type="xsd:boolean" default="false">
+        <xsd:annotation>
+          <xsd:documentation>
+            Use for the constraint on questions, indicates that the ADC can deal with question with header responses (non selectable)
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <!-- 5.5.3 -->
+
       <!-- Attribute specific for the responses constraints -->
       <xsd:attribute name="min" type="adc:numberPattern" default="*">
         <xsd:annotation>
