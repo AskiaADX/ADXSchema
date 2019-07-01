@@ -656,13 +656,23 @@
                 </xsd:documentation>
               </xsd:annotation>
             </xsd:enumeration>
+            <!-- Added 5.5.3 -->
+            <xsd:enumeration value="asx">
+              <xsd:annotation>
+                <xsd:documentation>
+                  Askia script extension file.
+                  The file must contain modules and exported functions. It must be in the modules directory
+                </xsd:documentation>
+              </xsd:annotation>
+            </xsd:enumeration>
+
           </xsd:restriction>
         </xsd:simpleType>
       </xsd:attribute>
       <xsd:attribute name="mode" default="static" use="optional">
         <xsd:annotation>
           <xsd:documentation>
-            Indicate how the content will be treat and where the system should find the content file.
+            Indicate how the content will be treated and where the system should find the content file.
           </xsd:documentation>
         </xsd:annotation>
         <xsd:simpleType>
@@ -671,8 +681,8 @@
               <xsd:annotation>
                 <xsd:documentation>
                   The share content is always associated with a file and must be place in the /Resources/Share/ folder of the ADC.
-                  The share content will be extract in the resources folder of the survey /Resources/SurveyName/.
-                  This kind of content, could be share accross ADX component and will not be overrides when it already exist in the folder.
+                  The share content will be extracted in the resources folder of the survey /Resources/SurveyName/.
+                  This kind of content, could be shared accross ADX component and will not be overriden when it already exist in the folder.
                 </xsd:documentation>
               </xsd:annotation>
             </xsd:enumeration>
@@ -694,6 +704,15 @@
                 </xsd:documentation>
               </xsd:annotation>
             </xsd:enumeration>
+            <xsd:enumeration value="modules">
+              <xsd:annotation>
+                <xsd:documentation>
+                  The modules content is always associated with an asx file and must be place in the /Resources/Modules/ folder of the ADC or ADP.
+                  The content will not be extracted phsyically but the compiled modules will be kept in memory
+                </xsd:documentation>
+              </xsd:annotation>
+            </xsd:enumeration>
+
           </xsd:restriction>
         </xsd:simpleType>
       </xsd:attribute>
