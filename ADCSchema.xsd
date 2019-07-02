@@ -708,7 +708,7 @@
               <xsd:annotation>
                 <xsd:documentation>
                   The modules content is always associated with an asx file and must be place in the /Resources/Modules/ folder of the ADC or ADP.
-                  The content will not be extracted phsyically but the compiled modules will be kept in memory
+                  The content will not be extracted physically but the compiled modules will be kept in memory
                 </xsd:documentation>
               </xsd:annotation>
             </xsd:enumeration>
