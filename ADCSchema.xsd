@@ -143,7 +143,7 @@
           </xsd:annotation>
           <xsd:complexType>
             <xsd:sequence>
-              <xsd:element name="category" minOccurs="1" maxOccurs="unbounded" type="xsd:token">
+              <xsd:element name="category" minOccurs="0" maxOccurs="unbounded" type="xsd:token">
                 <xsd:annotation>
                   <xsd:documentation>
                     [DEPRECATED]
