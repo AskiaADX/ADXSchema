@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            targetNamespace="http://www.askia.com/2.2.0/ADPSchema"
-            xmlns="http://www.askia.com/2.2.0/ADPSchema"
-            xmlns:adp="http://www.askia.com/2.2.0/ADPSchema"
+            targetNamespace="http://www.askia.com/2.3.0/ADPSchema"
+            xmlns="http://www.askia.com/2.3.0/ADPSchema"
+            xmlns:adp="http://www.askia.com/2.3.0/ADPSchema"
             elementFormDefault="qualified">
 
   <!-- SPECIFIC TYPE AND VARIABLES -->
@@ -58,17 +58,17 @@
         </xsd:annotation>
         <xsd:simpleType>
           <xsd:restriction base="adp:versionNumber">
-            <xsd:enumeration value="2.2.0">
+            <xsd:enumeration value="2.3.0">
               <xsd:annotation>
                 <xsd:documentation>
-                  Compatibility with 5.5.2.
+                  Compatibility with 5.5.3
                 </xsd:documentation>
               </xsd:annotation>
             </xsd:enumeration>
           </xsd:restriction>
         </xsd:simpleType>
       </xsd:attribute>
-      <xsd:attribute name="askiaCompat" type="adp:versionNumber" default="5.5.2">
+      <xsd:attribute name="askiaCompat" type="adp:versionNumber" default="5.5.3">
         <xsd:annotation>
           <xsd:documentation>
             Compatibility version with Askia product.
